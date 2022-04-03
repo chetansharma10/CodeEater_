@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeEATER</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+<body>
+
+    <div class="header">
+    <center><img  class="pic" src="images/logo.png" alt="missing"></center>
+
+        <div class="control-panel">
+            Select Language:
+            &nbsp; &nbsp;
+            <select id="ext" class="languages" onchange="changeLanguage()">
+                <option value="c"> C </option>
+                <option value="cpp"> C++ </option>
+                <option value="py"> Python </option>
+            </select>
+            <button class="clear" > clear </button>
+            <button class="btn" onclick="executeCode()"> &#9654  </button>    
+           </div>
+    
+
+      </div>  
+    
+    <div class="outer"> 
+
+        
+            <div class="editor" id="editor"></div>
+        
+
+            <div id="input" > 
+                <div> 
+                    
+                     <div class="in"> 
+                        <textarea  id="customIn" placeholder="input is here.."></textarea>    
+                
+                    </div>
+  
+                </div>
+                
+            </div>
+    
+            <div id="output"> output </div> 
+        
+    </div>    
+  <script>
+const textarea=document.querySelector("textarea");
+textarea.addEventListener("keyup",e=>{
+    textarea.style.height="auto";
+    let scheight=e.target.scrollheight;
+    textarea.style.height='${scheight}px';
+});
+
+
+   </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
