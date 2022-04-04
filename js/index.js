@@ -19,8 +19,6 @@ function executeCode()
     alert($("#ext").val());
     
 
-    //Creating AJAX call
-     
         var data= new FormData;
         
         data.append("ext",document.getElementById('ext').value);
@@ -33,16 +31,13 @@ function executeCode()
 
         let url = "/codeFront/util/compile.php";
     
-
-        //Fetch
-
           fetch(url,
                 {
                     method : "post",
                     body : data
                 }).then((res)=>{
-                    res.text().then((res)=>{
-                        document.getElementById('output').innerHTML=res["out"];
+                    res.json().then((res)=>{
+                        document.getElementById('output').innerHTML=(res['message']);
                     });
                 }).catch((e)=>{
                     console.log(e);
