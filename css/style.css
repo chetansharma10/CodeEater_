@@ -108,29 +108,58 @@
 #editor { 
     
     position: relative;
-    height: 102%;
+    height: 102.5%;
     width: 70.5%;
     font-size: larger;
             }
 
-        #output {
-                position: relative;
-                left: 70.5%;
-                height: 50.5%;
-            bottom: 102%;
-                background-color: #fffafa;
-                width: 30%;
-                border-style: double;
-            }
+       
 
  #input {
     position: relative;
     bottom: 102%;
     left: 70.5%;
-    height: 50%;
+    height: 30%;
     width: 30%;
     background-color: rgb(255, 255, 255);
     border-style: double;
+}
+#overall {
+    position: relative;
+    left: 70.5%;
+    height: 70%;
+bottom: 102%;
+    background-color: #fffafa;
+    width: 30%;
+    border-style: double;
+}
+#output{
+    position: relative;
+    left:0%;
+    height: 20.6%;
+bottom: 1%;
+    background-color: #fffafa;
+    width: 100%;
+
+}
+#compilation{
+    position: relative;
+    left:0%;
+    height: 32%;
+bottom: 1%;
+    background-color: #fffafa;
+    width: 100%;
+
+}
+.message
+{
+    position: relative;
+    left:0%;
+    height: 47%;
+bottom: 1%;
+    background-color: #fffafa;
+    width: 100%;
+    border: solid  black;
 }
             
 .in textarea
