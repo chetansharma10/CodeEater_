@@ -16,28 +16,45 @@ function changeLanguage() {
 
 function executeCode()
 {
-    alert($("#ext").val());
+   
     
 
+    //Creating AJAX call
+     
         var data= new FormData;
-        
         data.append("ext",document.getElementById('ext').value);
         data.append("code",editor.getSession().getValue());
+         
+	const input = document.getElementById('inFor').value;
+	//console.log(input);
+	data.append("in",input);
+          console.log(data);
         
-        const input = document.getElementById("customIn").value;
-        console.log(input);
-        
-        data.append("in",input);
-
         let url = "/codeFront/util/compile.php";
     
+
+        //Fetch
+
           fetch(url,
                 {
                     method : "post",
                     body : data
                 }).then((res)=>{
                     res.json().then((res)=>{
-                        document.getElementById('output').innerHTML=(res['message']);
+			    console.log(res);
+
+			   if(res['succ']==1)
+			    {
+                              document.getElementById('status').innerHTML=res['message']+' 🎉';
+			    }
+			    else 
+			    {	    
+                              document.getElementById('status').innerHTML=res['message']+' 🤦';
+			    }
+			    document.getElementById('out').innerHTML=res['output'];
+			    document.getElementById('ctime').innerHTML=res['ctime'];
+
+
                     });
                 }).catch((e)=>{
                     console.log(e);

@@ -1,79 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
-    <title>CodeEATER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏡 Home</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/images/Automation.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-    <div class="header">
-    <center><img  class="pic" src="images/logo.png" alt="missing"></center>
-
-        <div class="control-panel">
-            Select Language:
-            &nbsp; &nbsp;
-            <select id="ext" class="languages" onchange="changeLanguage()">
-                <option value="c"> C </option>
-                <option value="cpp"> C++ </option>
-                <option value="py"> Python </option>
-            </select>
-            <button class="clear" > clear </button>
-            <button class="btn" onclick="executeCode()"> &#9654  </button>    
-           </div>
     
-
-      </div>  
+  <div id="bg-main">
+      <nav style="background-color: rgba(169, 169, 169, 0.329);margin-top: -10px; margin-bottom: -10px; padding-top: 35px; padding-right: 15%;" class="navbar navbar-expand-lg navbar-dark">
+        <a style="margin-top: -10px;" class="navbar-brand" href="#"><img src="./logo22.png" width="8%" style="margin-right: 800px;" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="margin-right:  0;" class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a style=" font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a style=" font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>About</b></a>
+            </li>
+            <li class="nav-item">
+              <a style="font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>Contact</b></a>
+            </li>
+            <li class="nav-item">
+              <a style="font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>Testing</b></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     
-    <div class="outer"> 
-
-        
-            <div class="editor" id="editor"></div>
-        
-
-            <div id="input" > 
-                <div> 
-                    
-                     <div class="in"> 
-                        <textarea  id="customIn" placeholder="input is here.."></textarea>    
-                
-                    </div>
   
-                </div>
-                
-            </div>
-                <div id="overall" style=" background-color:rgb(255, 255, 255)"> 
-                    <div id="output" style="background-color: rgb(251, 251, 251); color: rgb(0, 0, 0); border: 2px solid black;"> <center> Status </center> 
-                    <center> <h5 style="margin-top: 2%; color: red;">message</h5></center>
-                    </div> 
-
-                <div class="message" id=" message" style="background-color: black; color: aliceblue; "> <center> Output</center>
-                 <center> <h5 style="margin-top: 2%; color: green;"> output</h5></center>    
-                </div>
-                   <div id="compilation" style="background-color: rgb(254, 254, 254); color: rgb(0, 0, 0);border: 2px solid white;"><center> Compilation Time</center>
-                    <center> <h5 style="margin-top: 2%; color: aqua;"> c time</h5></center>     </div> 
-           
-                </div>
+      <div style="padding-top: 2%; ">
+        <h1 style="padding-left: 0px;  font-weight:bolder; font-size: 5rem; color: white;">Welcome to CodeEater</h1>
+        <div style="padding-top: 5%; " >
+            <div style="width: 90%; height:50%; padding-left: 11%;">
+              <h3 style="margin-left: 2%; color: white">An integrated development environment (IDE) is software for building applications that combines common developer tools into a single graphical user interface (GUI). An IDE typically consists of:
+                Source code editor: A text editor that can assist in writing software code with features such as syntax highlighting with visual cues, providing language specific auto-completion, and checking for bugs as code is being written.
+                Local build automation: Utilities that automate simple, repeatable tasks as part of creating a local build of the software for use by the developer, like compiling computer source code into binary code, packaging binary code, and running automated tests.</h3>
         
-    </div>    
-  <script>
-const textarea=document.querySelector("textarea");
-textarea.addEventListener("keyup",e=>{
-    textarea.style.height="auto";
-    let scheight=e.target.scrollheight;
-    textarea.style.height='${scheight}px';
-});
+        </div>
+        </div>
+    </div>  
+    <a href="pages/ide.html"> <button  type="button" class="btn btn-lg btn-outline-light">Go to the Editor →</button> </html> </a>
 
 
-   </script>
+    <div style="margin-top: 5rem;" class="card-deck">
+      <div class="card col-sm-3" width="12rem" style="margin-left: 3%; border-radius: 5%;">
+          <div class="card-header">
+              <h2 style="text-align: center;">4 Languages Supported</h2>
+          </div>
+          <div class="card-body">
+            <img style="margin-left: 20px;" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/64672829/original/919b43dc8d265b1624568a0e78eeafb618f5acd3/c-language-learning-skills-for-beginners.png" width="80%" height="65%%" alt="">
+	    <br>
+            <h4>
+	    Supports C, C++, Python, Java.
+            </h4>            
+          </div>
+      </div>
+      <div class="card col-sm-3" width="12rem" style="border-radius: 5%;">
+          <div class="card-header">
+              <h3>Indentation Followed</h3>
+          </div>
+           <div class="card-body">
+             <img style="margin-left: 20px;" src="http://i.imgur.com/uJdvWIu.png" width="80%" height="65%" alt="">
+	     <br>
+             <h4>
+              You just have to write proper code auto indentation would be performed
+             </h4>            
+           </div>
+      </div>
+      <div class="card col-sm-3" width="12rem" style="border-radius: 5%;">
+          <div class="card-header">
+              <h3>Better User Experience</h3>
+          </div>
+           <div class="card-body">
+             <img style="margin-left: 40px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOMP8DTJ8c1wBZ6K4kI2-K9-X8Va2pncT6Wg&usqp=CAU" width="80%" height="65%" alt="">
+	     <br>  
+	     <h4>
+		     The colorful editor improves the user experience.
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/lib/ace.js"></script>
-    <script src="js/lib/theme-monokai.js"></script>
-    <script src="js/index.js"></script>
-
+	     </h4>
+            </div>
+      </div>
+      <div class="card col-sm-3" width="12rem" style="margin-right: 5%; border-radius: 5%;">
+        <div class="card-header">
+            <h3>Displays Compilation Time</h3>
+        </div>
+         <div class="card-body">
+           <img style=" margin-left: 20px;" src="https://image.shutterstock.com/image-vector/clock-logo-260nw-517991941.jpg" width="100%" height="65%" alt="">
+	   <br>
+           <h4>
+		   Compilation time would be displayed as soon as code runs
+		  
+            </h4>
+          </div>
+    </div>
+  </div>
+  <footer id="footer">
+    <i class="social-icon fab fa-twitter fa-4x"></i>
+    <i class="social-icon fab fa-facebook-f fa-4x"></i>
+    <i class="social-icon fab fa-instagram fa-4x"></i>
+    <i class="social-icon fas fa-envelope-square fa-4x"></i>
+    <h1>© Copyright 2022 CodeEater</h1>
+  </footer>
+</div>
 </body>
+
 </html>
