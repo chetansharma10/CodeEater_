@@ -14,6 +14,22 @@ function changeLanguage() {
     else if(language == 'py') editor.session.setMode("ace/mode/python");
 }
 
+const addNewLineForHTML=(datas)=>{
+      let correctFormat = "";
+        
+      if(datas.includes('\n'))
+      {
+          datas=datas.split('\n');
+      }
+
+      for(data of datas)
+      {
+         correctFormat+=data+"<br>";
+      }
+
+      return correctFormat;
+}
+
 function executeCode()
 {
    
@@ -51,10 +67,8 @@ function executeCode()
 			    {	    
                               document.getElementById('status').innerHTML=res['message']+' 🤦';
 			    }
-			    document.getElementById('out').innerHTML=res['output'];
-			    document.getElementById('ctime').innerHTML=res['ctime'];
-
-
+			    document.getElementById('out').innerHTML=addNewLineForHTML(res['output']);
+			    document.getElementById('ctime').innerHTML=addNewLineForHTML(res['ctime']);
                     });
                 }).catch((e)=>{
                     console.log(e);

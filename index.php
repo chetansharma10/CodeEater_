@@ -23,10 +23,10 @@
                 <a style=" font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>Home</b></a>
             </li>
             <li class="nav-item">
-              <a style=" font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>About</b></a>
+              <a style=" font-size: 15px; margin-top: -5px" class="nav-link" href="pages/about.php"><b>About</b></a>
             </li>
             <li class="nav-item">
-              <a style="font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>Contact</b></a>
+              <a style="font-size: 15px; margin-top: -5px" class="nav-link" href="pages/contact.php"><b>Contact</b></a>
             </li>
             <li class="nav-item">
               <a style="font-size: 15px; margin-top: -5px" class="nav-link" href="#"><b>Testing</b></a>
