@@ -40,7 +40,7 @@ function executeCode()
         var data= new FormData;
         data.append("ext",document.getElementById('ext').value);
         data.append("code",editor.getSession().getValue());
-         
+        data.append("username",document.getElementById('uname').value);
 	const input = document.getElementById('inFor').value;
 	//console.log(input);
 	data.append("in",input);

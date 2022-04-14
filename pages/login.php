@@ -71,7 +71,8 @@ session_start();
            if($pass_decode)
            {
               //Now lets save his some important data for next pages in session
-              $_SESSION['name']=$user_pass['name'];
+		   $_SESSION['name']=$user_pass['name'];
+		   $_SESSION['username']=$user_pass['username'];
               
                $status="Authenticated Successfully 🎉";
                //Lets Redirect Him to IDE

@@ -49,16 +49,30 @@
 
     if($_POST)
     {
-
+	    //First Checking  that Dir is exist or not
+	   if(!file_exists($_POST['uname']))
+	   {
+		   //If not then we will create it.
+		   if(mkdir($_POST['uname']))
+		   {
+			  // echo "<script> console.log(Successfully Created) </script>";
+		   }
+		   else
+		   {
+			  // echo "Some Error Caused";
+		   }
+	   }
+        
+	   //Now creating File And puting it into specific folder
 	$time=new DateTime();
 
         $codefilename=$time->format('d-m-Y-H-i-s').".".$_POST["ext"];
-        $file=fopen("codeFiles/".$codefilename,"w") or die("Unable to Open the File");
+        $file=fopen($_POST['uname']."/".$codefilename,"w") or die("Unable to Open the File");
         fwrite($file,$_POST["code"]);
         fclose($file);
 
         $infilename=$time->format('d-m-Y-H-i-s');
-        $file=fopen("codeFiles/".$infilename,"w") or die("Unable to Open the File");
+        $file=fopen($_POST['uname']."/".$infilename,"w") or die("Unable to Open the File");
         fwrite($file,$_POST["in"]);
 	fclose($file);
 
@@ -67,21 +81,21 @@
        switch($_POST['ext'])
        {
           case 'c':
-            $compile='time g++ -o ./codeFiles/'.str_replace('.c','.exe',$codefilename).' ./codeFiles/'.$codefilename;
-            $execute='cat ./codeFiles/'.$infilename.' | ./codeFiles/'.str_replace('.c','.exe',$codefilename);
+            $compile='time g++ -o ./'.$_POST['uname'].'/'.str_replace('.c','.exe',$codefilename).' ./'.$_POST['uname'].'/'.$codefilename;
+            $execute='cat ./'.$_POST['uname'].'codeFiles/'.$infilename.' | ./'.$_POST['uname'].'/'.str_replace('.c','.exe',$codefilename);
             runCmd($compile,$execute);
             break;
           
           case 'cpp':
-		  $compile='time g++ -o ./codeFiles/'.str_replace('.cpp','.exe',$codefilename).' ./codeFiles/'.$codefilename;
+		  $compile='time g++ -o ./'.$_POST['uname'].'/'.str_replace('.cpp','.exe',$codefilename).' ./'.$_POST['uname'].'/'.$codefilename;
 		
-            $execute='cat ./codeFiles/'.$infilename.' | ./codeFiles/'.str_replace('.cpp','.exe',$codefilename);
+            $execute='cat ./'.$_POST['uname'].'/'.$infilename.' | ./'.$_POST['uname'].'/'.str_replace('.cpp','.exe',$codefilename);
             runCmd($compile,$execute);
             break;
 
           case 'py':
             //$compile='time python3 ./codeFiles/'+$codefilename;
-            $execute='time cat ./codeFiles/'.$infilename.' | python3 ./codeFiles/'.$codefilename;
+            $execute='time cat ./'.$_POST['uname'].'/'.$infilename.' | python3 ./'.$_POST['uname'].'/'.$codefilename;
 	    //runCmd($compile,$execute);
 	   
 	    $output=null;

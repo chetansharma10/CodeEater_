@@ -32,7 +32,7 @@
      
     <center><img  class="pic" src="../images/logo.png" alt="missing"></center>
     <hr>
-   
+        
         <div class="control-panel">
             Select Language:
             &nbsp; &nbsp;
@@ -48,7 +48,7 @@
     
 
       </div>  
-    
+   <input type="hidden" id='username' value=<?php echo $_SESSION['username'] ?>>
     <div class="outer"> 
 
         
