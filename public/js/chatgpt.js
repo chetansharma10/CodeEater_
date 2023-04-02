@@ -16,6 +16,9 @@ let userSendBtn = document.getElementById('send');
 /** Binded Variable For input something to api */
 let userInput = document.getElementById('user-input');
 
+/** Your API KEY */
+let API_KEY = 'api-key';
+
 /** Attach Listener when switch changes */
 chatgptSwitch.addEventListener('change', (e) => {
 
@@ -137,7 +140,7 @@ function executeNetworkRequest() {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                Authorization: "Bearer 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",
+                Authorization: `Bearer ${API_KEY}`,
             },
         }
     ).then((response) => {
