@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+.logo {
+    font-family: 'Anton', sans-serif;
+}
+
+.test {
+    border: 1px solid red;
+}
+
+.bg-custom-dark {
+    background-color: rgba(0, 0, 0, 0.849);
+}
+
+.bg-light-dark {
+    background-color: rgba(24, 22, 22, 0.399);
+}
+
+.status {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: 0.1s ease;
+    cursor: pointer;
+
+}
+
+.status:hover {
+
+    opacity: 1;
+    transition: 0.1s ease;
+}
+
+.chatgpt-dialog {
+    position: fixed;
+    width: 450px;
+    margin-right: 3%;
+    height: 450px;
+    top: 0px;
+    right: 0px;
+    border-radius: 0.5rem;
+    display: none;
+    padding: 0px;
+}
+
+.chatgpt-header {
+    background-color: #000000;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.active {
+    display: block !important;
+}
+
+body {
+    overflow: hidden;
+}
+
+.ace-monokai .ace_gutter {
+    background: rgba(0, 0, 0, 0.082);
+}
+
+.ace-monokai {
+    background-color: rgba(0, 0, 0, 0.405);
+}
+
+/* #input{
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+} */
+
+.terminal-container {
+    height: 200px;
+    max-height: 140px;
+    overflow: auto;
+}
+
+
+.send {
+    color: black;
+    display: block;
+    height: max-content;
+    width: 100%;
+}
+
+.gpt {
+    background-color: #6f6f6f85;
+    color: white;
+}
+
+
+
+
+.dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: white;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: white;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+}
+
+.dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: white;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0.5s;
+}
+
+@keyframes dot-flashing {
+    0% {
+        background-color: white;
+    }
+
+    50%,
+    100% {
+        background-color: rgba(86, 160, 218, 0.2);
+    }
+}

@@ -2,11 +2,8 @@
 <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏡 Home</title>
-
+    <title>Code Eater</title>
     <?php include 'links/links.php' ?>
-    
-
 </head>
 
 <body>

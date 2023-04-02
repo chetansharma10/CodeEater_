@@ -1,8 +1,8 @@
 <?php
 
    $username = "root";
-   $password = "TOb1SqpLSjPGLVYAwU6G";
-   $server = "codeeater.cfq636670aed.ap-south-1.rds.amazonaws.com";
+   $password = "root";
+   $server = "localhost";
    $dbname = "codeEater";
 
   $conn = mysqli_connect($server,$username,$password);
@@ -15,7 +15,6 @@
    }
    else
    {
-      
        die("Not Abe to Connect ".mysqli_connect_error());
    }
 
