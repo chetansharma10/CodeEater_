@@ -81,7 +81,7 @@ if (!isset($_SESSION['name'])) {
                 <div class="col-lg-10 col-12  text-white border-end border-dark bg-light-dark  ">
                     <outlet-window>
 
-                        <div class="editor position-relative w-100" id="editor">
+                        <div class="position-relative  w-100" id="editor">
                         </div>
 
                         <div class=" position-fixed d-flex flex-column justify-content-start w-100 bottom-0" style="background-color:black;">
@@ -190,9 +190,9 @@ if (!isset($_SESSION['name'])) {
     <script src="../public/js/lib/theme-monokai.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
 
-    <script src="../public/js/index.js"></script>
 
     <script src="./../public/js/chatgpt.js"></script>
+    <script src="../public/js/index.js"></script>
 
 
 
