@@ -17,7 +17,7 @@ let userSendBtn = document.getElementById('send');
 let userInput = document.getElementById('user-input');
 
 /** Your API KEY */
-let API_KEY = 'api-key';
+let API_KEY = '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';
 
 /** Attach Listener when switch changes */
 chatgptSwitch.addEventListener('change', (e) => {

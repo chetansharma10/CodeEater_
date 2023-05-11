@@ -83,20 +83,6 @@ body {
 
 }
 
-.btn {
-    position: absolute;
-    background: #fc0000;
-    left: 95%;
-
-    color: white;
-    border: solid black;
-    border-radius: 100%;
-    cursor: pointer;
-    height: 100%;
-    width: 4%;
-
-
-}
 
 #lang {
 
@@ -209,13 +195,6 @@ textarea::-webkit-scrollbar {
     width: 45px;
 }
 
-.button-clear {
-    position: fixed;
-    text-align: right;
-    padding: 4px;
-    right: 1cm;
-    bottom: 4%;
-}
 
 #btnIcon {
     height: 18px;
